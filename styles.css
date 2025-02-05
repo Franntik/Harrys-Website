@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+Sans+One&display=swap');
+
+
+#header {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    background-image: linear-gradient(red, purple, blue);
+    color:white;
+    font-family: racing sans one;
+    font-size: 1.3rem;
+}
+
+#main {
+    padding: 2rem;
+    font-family: montserrat;
+}
+
+#footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    font-family: montserrat;
+}
