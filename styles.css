@@ -1,24 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+Sans+One&display=swap');
+  
+:root[data-theme="light"] {
+    --top-grad: red;
+    --bot-grad: blue;
+}
 
+:root[data-theme="synthwave"] {
+    --top-grad: blue;
+    --bot-grad: red;
+}
+  
 
 #header {
     display: flex;
     justify-content: center;
-    padding: 3rem;
-    background-image: linear-gradient(red, purple, blue);
+    padding: 2rem;
+    background: linear-gradient(var(--top-grad), var(--bot-grad));
     color:white;
-    font-family: racing sans one;
+    font-family: "Racing Sans One", sans-serif;
     font-size: 1.5rem;
 }
 
 nav {
     position: sticky;
     top: 0;
+    background: var(--bot-grad)
 }
 
 #main {
     padding: 2rem;
-    font-family: montserrat;
+    font-family: "Montserrat", sans-serif;
 }
 
 #main h3 {
@@ -26,13 +37,14 @@ nav {
 }
 
 #main div {
-    padding-bottom: 10rem;
+    padding-bottom: 2rem;
 }
 
 footer {
     padding: 2rem;
     display: flex;
     justify-content: center;
-    background-color: grey;
+    background-color: #6B7280;
+    color: white;
     font-family: montserrat;
 }
