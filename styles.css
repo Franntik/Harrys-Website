@@ -10,6 +10,9 @@
     --bot-grad: red;
 }
   
+#bold {
+    font-weight: bolder;
+}
 
 #header {
     display: flex;
@@ -27,9 +30,20 @@ nav {
     background: var(--bot-grad)
 }
 
+.navbar-center {
+    gap: 1rem;
+}
+
 #main {
     padding: 2rem;
     font-family: "Montserrat", sans-serif;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 #main h3 {
