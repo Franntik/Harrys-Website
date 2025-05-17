@@ -56,10 +56,6 @@ nav {
     font-size: 2rem;
 }
 
-#main div {
-    padding-bottom: 2rem;
-}
-
 #paneParent {
     display: flex;
     justify-content: center;
