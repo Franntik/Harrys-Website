@@ -52,19 +52,34 @@ nav {
     flex: 1;
 }
 
-#contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
 #main h3 {
     font-size: 2rem;
 }
 
 #main div {
     padding-bottom: 2rem;
+}
+
+#paneParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#pane {
+    max-width: 30rem;
+    background-color: hsl(var(--er)); /* error */
+    color: hsl(var(--su)); /* success */
+    padding: 1rem;
+}
+
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 footer {
