@@ -11,7 +11,14 @@
 }
   
 #bold {
-    font-weight: bolder;
+    font-weight: bold;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 #header {
@@ -30,6 +37,11 @@ nav {
     background: var(--bot-grad)
 }
 
+#navbar {
+    position: sticky;
+    top: 0;
+}
+
 .navbar-center {
     gap: 1rem;
 }
@@ -37,6 +49,7 @@ nav {
 #main {
     padding: 2rem;
     font-family: "Montserrat", sans-serif;
+    flex: 1;
 }
 
 #contact {
