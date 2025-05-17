@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+Sans+One&display=swap');
-  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Racing+Sans+One&display=swap');
+
 :root[data-theme="light"] {
     --top-grad: red;
     --bot-grad: blue;
@@ -70,12 +70,24 @@ nav {
     padding: 1rem;
 }
 
+#pane h3 {
+    font-family: "Quicksand";
+}
+
 
 #contact {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
+}
+
+#contact p, #contact h2 {
+    font-family: "Quicksand";
+}
+
+#contactButton {
+    margin-top: 1.2rem;
 }
 
 footer {
