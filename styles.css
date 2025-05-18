@@ -34,12 +34,13 @@ html, body {
 nav {
     position: sticky;
     top: 0;
-    background: var(--bot-grad)
+    background: var(--bot-grad);
 }
 
 #navbar {
     position: sticky;
     top: 0;
+    z-index: 50;
 }
 
 .navbar-center {
@@ -69,6 +70,7 @@ nav {
     background-color: hsl(var(--er)); /* error */
     color: hsl(var(--su)); /* success */
     padding: 1rem;
+    margin-bottom: 3rem;
 }
 
 #pane h3 {
