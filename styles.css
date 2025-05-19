@@ -43,9 +43,25 @@ nav {
     z-index: 50;
 }
 
-.navbar-center {
+@media (max-width: 500px) {
+  #navItem { 
+    display: none;
+  }
+  #navIcon {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: 500px) {
+  #navIcon {
+    display: none;
+  }
+  .navbar-center {
     gap: 1rem;
 }
+}
+
 
 #main {
     padding: 2rem;
@@ -57,19 +73,28 @@ nav {
     font-size: 2rem;
 }
 
+#TESTPARENT {
+    display: flex;
+}
+
+#TESTCHILD {
+    padding: 4rem;
+}
+
 #paneParent {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    width: 100%;
 }
 
 #pane {
     max-width: 30rem;
     background-color: hsl(var(--er)); /* error */
     color: hsl(var(--su)); /* success */
-    padding: 1rem;
+    
     margin-bottom: 3rem;
 }
 
