@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    </script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Harry Stringer</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body class="flex flex-col min-h-screen">
+    
+  <!-- Somewhere in your HTML page -->
+  <header id="header">
+    <h1>Harry Stringer</h1>
+  </header>
+  <section id="navbar"></section> <!-- This is the target element -->
+  <script>
+    fetch("/partials/navbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
+
+<!--###########################################################################################-->
+
+  <section id="main" class="flex-1">
+    
+    <div id="paneParent">
+      <div id="pane">
+        <h3>Music</h3>
+        <p>Not really sure what I'll put here</p>
+      </div>
+    </div>
+  </section>
+
+<!--###########################################################################################-->
+
+  <section id="bottom"></section> <!-- This is the target element -->
+    <script>
+      fetch("/partials/bottom.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("bottom").innerHTML = data);
+    </script>
+    <script>
+      window.addEventListener("load", document.getElementById("date").innerHTML = (new Date()).getFullYear())
+    
+      function switchTheme() {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  const newTheme = currentTheme === "light" ? "synthwave" : "light";
+  document.documentElement.setAttribute("data-theme", newTheme);
+
+  // Save to localStorage
+  localStorage.setItem("theme", newTheme);
+
+  // Force background to update
+  const header = document.getElementById("header");
+  header.style.background = "none";
+  setTimeout(() => {
+    header.style.background = `linear-gradient(var(--top-grad), var(--bot-grad))`;
+  }, 10);
+}
+
+    </script>
+  </section> 
+</body>
+</html>
